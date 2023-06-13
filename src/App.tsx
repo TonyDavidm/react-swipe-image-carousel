@@ -1,24 +1,25 @@
+import styled from "styled-components";
+
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 
 import sampleData from "./data/fakedata.json";
 
-export type BannerProps = {
-  title: string;
-  tags: string[];
+type BannerProps = {
   description: string;
   image: string;
+  tags: string[];
+  title: string;
 };
 
 type SampleData = Pick<BannerProps, "title" | "description"> & {
-  genres: string[];
   cover_url: string;
+  genres: string[];
 };
 
-export const StyledSwiper = styled( Swiper )`
+const StyledSwiper = styled( Swiper )`
   & .swiper-button-next,
   .swiper-button-prev {
     color: white;
@@ -129,7 +130,6 @@ const HeroBanner = () => (
 export default function App() {
   return (
     <div className="App">
-      <h1>Image Carousel</h1>
       <HeroBanner />
     </div>
   );
