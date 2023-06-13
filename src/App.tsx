@@ -1,9 +1,9 @@
-import { HeroBanner } from "./HeroBanner";
+import SwipeBanner from "./components/SwipeBanner";
 
 export default function App() {
   return (
     <div className="App">
-      <HeroBanner />
+      <SwipeBanner />
     </div>
   );
 }
